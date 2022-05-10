@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-10T02:31:08.757Z" agent="5.0 (Windows)" etag="2ZezsZ0Mz__pdnUxCGW4" version="17.4.6" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2022-05-10T02:42:27.444Z" agent="5.0 (Windows)" etag="tc7GkqElvV0cDu4IpT5y" version="17.4.6" type="github" pages="7">
   <diagram id="O4Zk2t4vwflLh02XBHG_" name="Login">
     <mxGraphModel dx="2083" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -605,6 +605,14 @@
         <mxCell id="n4R8k3F52XqrjKGaztix-3" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.enterprise.filter" vertex="1" parent="A8wZdI5MWhzZ0q6_M2Js-1">
           <mxGeometry x="385" y="240" width="20" height="18" as="geometry" />
         </mxCell>
+        <mxCell id="oXDxpaDkGzMDVfq88sBn-1" value="Citas" style="strokeColor=none;fillColor=none;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=center;spacing=20;fontSize=14;fontColor=#999999;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="220" y="140" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oXDxpaDkGzMDVfq88sBn-2" value="" style="shape=triangle;direction=south;fillColor=#0085FC;strokeColor=none;perimeter=none;fontColor=#3399FF;" vertex="1" parent="oXDxpaDkGzMDVfq88sBn-1">
+          <mxGeometry x="1" y="0.5" width="10" height="5" relative="1" as="geometry">
+            <mxPoint x="-17" y="-2.5" as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -1207,25 +1215,18 @@
         <mxCell id="I1cSbsmam4e711qpxHXn-4" value="Navbar" style="html=1;shadow=0;dashed=0;fillColor=#E3F3FD;strokeColor=none;fontSize=16;fontColor=#161819;align=left;spacing=15;" parent="I1cSbsmam4e711qpxHXn-1" vertex="1">
           <mxGeometry y="110" width="820" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="I1cSbsmam4e711qpxHXn-5" value="Home" style="fillColor=none;strokeColor=none;fontSize=14;fontColor=#71797E;align=center;" parent="I1cSbsmam4e711qpxHXn-4" vertex="1">
-          <mxGeometry width="60" height="40" relative="1" as="geometry">
-            <mxPoint x="80" y="10" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="I1cSbsmam4e711qpxHXn-6" value="Registrar" style="fillColor=none;strokeColor=none;fontSize=14;fontColor=#71797E;align=center;spacingRight=0;" parent="I1cSbsmam4e711qpxHXn-4" vertex="1">
-          <mxGeometry width="80" height="40" relative="1" as="geometry">
-            <mxPoint x="140" y="10" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="I1cSbsmam4e711qpxHXn-7" value="About" style="fillColor=none;strokeColor=none;fontSize=14;fontColor=#71797E;align=center;" parent="I1cSbsmam4e711qpxHXn-4" vertex="1">
-          <mxGeometry width="80" height="40" relative="1" as="geometry">
-            <mxPoint x="290" y="10" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="I1cSbsmam4e711qpxHXn-8" value="Citas" style="strokeColor=none;fillColor=none;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=center;spacing=20;fontSize=14;fontColor=#000000;spacingRight=10;" parent="I1cSbsmam4e711qpxHXn-4" vertex="1">
           <mxGeometry x="209.88095238095238" y="10" width="82" height="40" as="geometry" />
         </mxCell>
         <mxCell id="I1cSbsmam4e711qpxHXn-9" value="" style="shape=triangle;direction=south;fillColor=#0085FC;strokeColor=none;perimeter=none;fontColor=#3399FF;" parent="I1cSbsmam4e711qpxHXn-8" vertex="1">
+          <mxGeometry x="1" y="0.5" width="10" height="5" relative="1" as="geometry">
+            <mxPoint x="-17" y="-2.5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="munO1Cid6tz9rJXtVXSL-1" value="Empleados" style="strokeColor=none;fillColor=none;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=center;spacing=20;fontSize=14;fontColor=#000000;spacingRight=10;" vertex="1" parent="I1cSbsmam4e711qpxHXn-4">
+          <mxGeometry x="96.75" y="10" width="99" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="munO1Cid6tz9rJXtVXSL-2" value="" style="shape=triangle;direction=south;fillColor=#0085FC;strokeColor=none;perimeter=none;fontColor=#3399FF;" vertex="1" parent="munO1Cid6tz9rJXtVXSL-1">
           <mxGeometry x="1" y="0.5" width="10" height="5" relative="1" as="geometry">
             <mxPoint x="-17" y="-2.5" as="offset" />
           </mxGeometry>
@@ -1483,6 +1484,9 @@
         </mxCell>
         <mxCell id="YlGHTnNxYxbca596f1dz-8" value="Folio: 1546464213" style="fillColor=none;strokeColor=none;align=left;fontSize=14;fontColor=#212529;" vertex="1" parent="I1cSbsmam4e711qpxHXn-1">
           <mxGeometry x="20" y="170" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mCiOOOK0J3X2m8d40fmZ-1" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#505050;shape=mxgraph.mscae.intune.update;fontSize=15;fontColor=#999999;" vertex="1" parent="I1cSbsmam4e711qpxHXn-1">
+          <mxGeometry x="450" y="680" width="48" height="50" as="geometry" />
         </mxCell>
         <mxCell id="uOJO-b9lQlH9y_bdG-XP-3" value="sube la cita a la base de datos y envia el qr al correo registrado adjuntando un folio " style="whiteSpace=wrap;html=1;fontSize=14;align=left;fillColor=#0085FC;strokeColor=none;fontColor=#FFFFFF;shadow=0;dashed=0;strokeWidth=1;spacingLeft=0;fontStyle=1;spacing=5;" parent="1" vertex="1">
           <mxGeometry x="400" y="980" width="150" height="110" as="geometry" />
