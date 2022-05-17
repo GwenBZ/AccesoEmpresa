@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
+  Recover(){
+    this.route.navigate(['/navbar/Recover']);
+  }
+  Administrarcitas(){
+    this.route.navigate(['/navbar/Administrarcitas']);
+  }
+
+}
+
 
 }
