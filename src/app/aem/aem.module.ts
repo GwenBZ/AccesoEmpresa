@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { AemRoutingModule } from './aem-routing.module';
 import { AdministrarcitasComponent } from './administrarcitas/administrarcitas.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
-    AdministrarcitasComponent
+    AdministrarcitasComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
