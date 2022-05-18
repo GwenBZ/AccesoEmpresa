@@ -1,0 +1,68 @@
+.container {
+  height: 10%;
+  width: 33%;
+  position: relative;
+  left: -33%;
+  border-radius:22px;
+}
+input{
+  width: 100%;
+  border-radius:5px;
+}
+
+.row{
+  width: 300%;
+}
+.container2 {
+  height: 10%;
+  width: 12.5%;
+  position: relative;
+
+  border-radius:22px;
+}
+.container4 {
+  height: 10%;
+  width: 32.7%;
+  position: relative;
+
+  border-radius:22px;
+}
+img{
+  width: 100%;
+  position: relative;
+  left: 1000px;
+  top: 20px;
+}
+
+.container3{
+  position: relative;
+  height: 50%;
+  width: 100%;
+  left: -420%;
+  top: 50%;
+
+}
+
+.container5{
+  position: relative;
+  height: 100px;
+  width: 200px;
+  left: 0px;
+  top: -150px;
+
+}
+
+
+/*** custom checkboxes ***/
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
