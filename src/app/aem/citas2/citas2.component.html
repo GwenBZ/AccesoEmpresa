@@ -1,1 +1,91 @@
 <p>citas2 works!</p>
+<div class="container">
+  <form id="new_customer" method="post">
+    <div class="modal-header">
+      <h5 class="modal-title">Editar Usuarios</h5>
+    </div>
+  </form>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="input-field col s6"><br>
+      <label for="first_name">First Name</label>
+      <input id="first_name" type="text" class="validate" required>
+    </div>
+
+    <div class="input-field col s6"><br>
+      <label for="last_name">Apellidos</label>
+      <input id="last_name" type="text" class="validate" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6"><br>
+      <label for="first_name">Email</label>
+      <input id="email" type="text" class="validate" required>
+    </div>
+    <div class="input-field col s6"><br>
+      <label for="last_name">Password</label>
+      <input id="password" type="text" class="validate" required>
+    </div>
+    <div class="row">
+      <div class="input-field col s6"><br>
+        <label for="first_name">Dirección 1</label>
+        <input id="direccion1" type="text" class="validate" required>
+      </div>
+      <div class="row">
+        <div class="input-field col s6"><br>
+          <label for="first_name">Ciudad</label>
+          <input id="ciudad" type="text" class="validate" required>
+        </div>
+        <div class="input-field col s6"><br>
+          <label for="first_name">Estado</label>
+          <input id="estado" type="text" class="validate" required>
+        </div>
+        <div class="input-field col s6"><br>
+          <label for="first_name">Codigo postals</label>
+          <input id="codigo postal" type="text" class="validate" required>
+        </div>
+      </div>
+      <div class="container4">
+        <label for="first_name">Numero de Empleado</label>
+        <input id="Numero de Empleado" type="text" class="validate" required>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="row">
+        <div class="input-field col s6"><br>
+          <label for="first_name">Departamento</label>
+          <select class="form-select" id="state" required="">
+            <option value=""></option>
+            <option>Recursos Humanos</option>
+            <option>Departamento de Marketing</option>
+            <option>Departamento de Compras</option>
+          </select>
+        </div>
+      </div>
+      <div class="container3">
+        <img src="https://qrcode.tec-it.com/API/QRCode?data=smsto%3a555-555-5555%3aGenerador+de+C%c3%b3digos+QR+de+TEC-IT">
+      </div>
+      <div class="container5">
+        <div>
+          <input id="box1" type="checkbox" />
+          <label for="box1">Registrar Usuarios</label>
+          <input id="box2" type="checkbox" />
+          <label for="box2">Administrar Citas</label>
+          <input id="box3" type="checkbox" />
+          <label for="box3">Registrar Citas</label>
+          <input id="box4" type="checkbox" />
+          <label for="box4">Editar Usuarios</label>
+        </div>
+      </div>
+      <button class="btn-primary">SIGN IN </button>
+      <button style="left:90px;position:relative;top:-30px" class="btn-danger">CANCELAR </button>
+    </div>
+  </div>
+</div>
+<div class="container6">
+  <img [src]="url" style="height:200px;width:200px;top:-320px"><br>
+  <input type="file" class="form-control form-control" x-model="fileName"(change)="onselectFile({e : $event})"style="position: relative;left: 820px;top: -585px;width:500px">
+</div>
+
