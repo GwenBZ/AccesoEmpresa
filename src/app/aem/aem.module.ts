@@ -8,6 +8,7 @@ import { Citas2Component } from './citas2/citas2.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { Citas3Component } from './citas3/citas3.component';
 import { Empresas3Component } from './empresas3/empresas3.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { Empresas3Component } from './empresas3/empresas3.component';
     Citas2Component,
     RegistrarComponent,
     Citas3Component,
-    Empresas3Component
+    Empresas3Component,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
