@@ -1,5 +1,7 @@
+// @ts-ignore
 import { Component, OnInit } from '@angular/core';
 
+// @ts-ignore
 @Component({
   selector: 'app-borrar',
   templateUrl: './borrar.component.html',
