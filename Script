@@ -1,0 +1,186 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.6.47-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database AccesoEmpresa;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use AccesoEmpresa;
+Database changed
+
+mysql> create table Roles(id_roles int auto_increment, descripcion varchar(20), primary key(id_roles));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> create table Departamento(id_departamento int auto_increment, descripcion varchar(20), primary key(id_departamento));
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> create table Datos_personales(id_usuario varchar(4) not null, nombre varchar(30), ap_paterno varchar(20), ap_materno varchar(20), sexo varchar(1), edad int, fecha_nacimiento date, telefono varchar(15), correo varchar(50), colonia varchar(50), calle varchar(50), cp varchar(5), primary key(id_usuario));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table Usuario (id_usuario varchar(4) not null, usuario varchar(20), contrasenia varchar(100), id_roles int not null, id_datos varchar(4) not null, id_departamento int not null, primary key(id_usuario));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> alter table Usuario add foreign key (id_roles) references Roles(id_roles);
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table Usuario add foreign key (id_datos) references Datos_personales(id_usuario);
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table Usuario add foreign key (id_departamento) references Departamento(id_departamento);
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into Roles values(null, 'Trabajador');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Roles values(null, 'Proveedor');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Roles values(null, 'Invitado');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Departamento values(null, 'Recursos humanos');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Departamento values(null, 'Marketing');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Departamento values(null, 'Desarrollo');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Departamento values(null, 'Gestion');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Datos_personales values('T000', 'Aline', 'Morales', 'Mendez', 'F', 22, '2000-05-02', '5512345678', 'aline@gmail.com', 'Miguel Hidalgo', 'Benito Juarez', '55490');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Datos_personales values('T001', 'Dari', 'Hernandez', 'Hernandez', 'F', 22, '2000-02-16', '5512876678', 'dari@gmail.com', 'Los laureles', 'Libertad', '62547');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Datos_personales values('P000', 'Angel', 'Mendez', 'Mendez', 'M', 22, '2000-03-16', '5598876678', 'angel@gmail.com', 'Los laureles', 'Libertad', '62547');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into Datos_personales values('P000', 'Fransisco', 'Aguilar', 'Becerra', 'M', 22, '2000-03-16', '5598876678', 'angel@gmail.com', 'Los laureles', 'Libertad', '62547');
+ERROR 1062 (23000): Duplicate entry 'P000' for key 'PRIMARY'
+mysql> insert into Datos_personales values('P001', 'Fransisco', 'Aguilar', 'Becerra', 'M', 22, '2000-03-16', '5598876678', 'angel@gmail.com', 'Los laureles', 'Libertad', '62547');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Datos_personales values('V000', 'Ana', 'Contreras', 'Figueroa', 'F', 22, '2000-03-16', '5598876678', 'ana@gmail.com', 'Los laureles', 'Libertad', '62547');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Datos_personales values('V001', 'Martha', 'Palma', 'Garcia', 'F', 22, '2000-03-16', '5598876678', 'martha@gmail.com', 'Los laureles', 'Libertad', '62547');
+Query OK, 1 row affected (0.00 sec)
+
+#***CONSULTAS***
+
+mysql> select * from Roles;
++----------+-------------+
+| id_roles | descripcion |
++----------+-------------+
+|        1 | Trabajador  |
+|        2 | Proveedor   |
+|        3 | Invitado    |
++----------+-------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from Departamento;
++-----------------+------------------+
+| id_departamento | descripcion      |
++-----------------+------------------+
+|               1 | Recursos humanos |
+|               2 | Marketing        |
+|               3 | Desarrollo       |
+|               4 | Gestion          |
+|               5 | sin departamento |
++-----------------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Datos_personales;
++------------+-----------+------------+------------+------+------+------------------+------------+------------------+----------------+---------------+-------+
+| id_usuario | nombre    | ap_paterno | ap_materno | sexo | edad | fecha_nacimiento | telefono   | correo           | colonia        | calle         | cp    |
++------------+-----------+------------+------------+------+------+------------------+------------+------------------+----------------+---------------+-------+
+| P000       | Angel     | Mendez     | Mendez     | M    |   22 | 2000-03-16       | 5598876678 | angel@gmail.com  | Los laureles   | Libertad      | 62547 |
+| P001       | Fransisco | Aguilar    | Becerra    | M    |   22 | 2000-03-16       | 5598876678 | angel@gmail.com  | Los laureles   | Libertad      | 62547 |
+| T000       | Aline     | Morales    | Mendez     | F    |   22 | 2000-05-02       | 5512345678 | aline@gmail.com  | Miguel Hidalgo | Benito Juarez | 55490 |
+| T001       | Dari      | Hernandez  | Hernandez  | F    |   22 | 2000-02-16       | 5512876678 | dari@gmail.com   | Los laureles   | Libertad      | 62547 |
+| V000       | Ana       | Contreras  | Figueroa   | F    |   22 | 2000-03-16       | 5598876678 | ana@gmail.com    | Los laureles   | Libertad      | 62547 |
+| V001       | Martha    | Palma      | Garcia     | F    |   22 | 2000-03-16       | 5598876678 | martha@gmail.com | Los laureles   | Libertad      | 62547 |
++------------+-----------+------------+------------+------+------+------------------+------------+------------------+----------------+---------------+-------+
+6 rows in set (0.00 sec)
+
+mysql> select * from Usuario;
++------------+-----------+----------------------------------+----------+----------+-----------------+
+| id_usuario | usuario   | contrasenia                      | id_roles | id_datos | id_departamento |
++------------+-----------+----------------------------------+----------+----------+-----------------+
+| P000       | Angel     | 81dc9bdb52d04dc20036dbd8313ed055 |        2 | P000     |               5 |
+| P001       | Fransisco | 81dc9bdb52d04dc20036dbd8313ed055 |        2 | P001     |               5 |
+| T000       | Aline     | 81dc9bdb52d04dc20036dbd8313ed055 |        1 | T000     |               1 |
+| T001       | Dari      | 81dc9bdb52d04dc20036dbd8313ed055 |        1 | T001     |               2 |
+| V000       | Ana       | 81dc9bdb52d04dc20036dbd8313ed055 |        3 | V000     |               5 |
+| V001       | Martha    | 81dc9bdb52d04dc20036dbd8313ed055 |        3 | V001     |               5 |
++------------+-----------+----------------------------------+----------+----------+-----------------+
+6 rows in set (0.00 sec)
+
+mysql> select nombre, correo, id_departamento from Datos_personales inner join Usuario on Datos_personales.id_usuario = Usuario.id_datos;
++-----------+------------------+-----------------+
+| nombre    | correo           | id_departamento |
++-----------+------------------+-----------------+
+| Angel     | angel@gmail.com  |               5 |
+| Fransisco | angel@gmail.com  |               5 |
+| Aline     | aline@gmail.com  |               1 |
+| Dari      | dari@gmail.com   |               2 |
+| Ana       | ana@gmail.com    |               5 |
+| Martha    | martha@gmail.com |               5 |
++-----------+------------------+-----------------+
+6 rows in set (0.00 sec)
+
+mysql>  select usuario, descripcion from Usuario inner join Roles on Usuario.id_roles = Roles.id_roles;
++-----------+-------------+
+| usuario   | descripcion |
++-----------+-------------+
+| Aline     | Trabajador  |
+| Dari      | Trabajador  |
+| Angel     | Proveedor   |
+| Fransisco | Proveedor   |
+| Ana       | Invitado    |
+| Martha    | Invitado    |
++-----------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> select usuario, descripcion from Usuario inner join Departamento on Usuario.id_departamento = Departamento.id_departamento;
++-----------+------------------+
+| usuario   | descripcion      |
++-----------+------------------+
+| Aline     | Recursos humanos |
+| Dari      | Marketing        |
+| Angel     | sin departamento |
+| Fransisco | sin departamento |
+| Ana       | sin departamento |
+| Martha    | sin departamento |
++-----------+------------------+
+6 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
