@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-04T01:03:34.874Z" agent="5.0 (Windows)" etag="8H8xHZ_0VVzcLwY8OL1v" version="19.0.0" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2022-06-04T01:09:57.053Z" agent="5.0 (Windows)" etag="4JaDJ3W2xi2xD3ZEXxbn" version="19.0.0" type="github" pages="10">
   <diagram id="iYbkd0sSHCvIUEbxvmvT" name="Recover">
     <mxGraphModel dx="1182" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -652,6 +652,22 @@
             <mxRectangle width="95" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="RasZrJnlZ0y7fZ_Ei2is-1" value="" style="whiteSpace=wrap;html=1;fontSize=15;verticalAlign=top;strokeColor=#0080F0;fontColor=#999999;labelBackgroundColor=#ffffff;strokeWidth=2;shadow=0;dashed=0;" vertex="1" parent="mq0pnxAKoChajJtQNe7F-27">
+          <mxGeometry x="765" width="NaN" height="40" as="geometry">
+            <mxRectangle width="NaN" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RasZrJnlZ0y7fZ_Ei2is-3" value="" style="whiteSpace=wrap;html=1;fontSize=15;verticalAlign=top;strokeColor=#0080F0;fontColor=#999999;labelBackgroundColor=#ffffff;strokeWidth=2;shadow=0;dashed=0;" vertex="1" parent="mq0pnxAKoChajJtQNe7F-27">
+          <mxGeometry width="NaN" height="40" as="geometry">
+            <mxRectangle width="NaN" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RasZrJnlZ0y7fZ_Ei2is-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="A8wZdI5MWhzZ0q6_M2Js-1" source="_0hBDts88hpuU9CHLBgN-1" target="RasZrJnlZ0y7fZ_Ei2is-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RasZrJnlZ0y7fZ_Ei2is-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="A8wZdI5MWhzZ0q6_M2Js-1" source="_0hBDts88hpuU9CHLBgN-1" target="RasZrJnlZ0y7fZ_Ei2is-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="_0hBDts88hpuU9CHLBgN-1" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.compose;fontSize=15;fontColor=#999999;" parent="A8wZdI5MWhzZ0q6_M2Js-1" vertex="1">
           <mxGeometry x="970.9" y="280.45" width="29.099999999999998" height="29.099999999999998" as="geometry" />
         </mxCell>
@@ -674,6 +690,12 @@
         </mxCell>
         <mxCell id="n4R8k3F52XqrjKGaztix-2" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.enterprise.filter" parent="A8wZdI5MWhzZ0q6_M2Js-1" vertex="1">
           <mxGeometry x="280" y="240" width="20" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="RasZrJnlZ0y7fZ_Ei2is-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.381;entryY=0.771;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;" edge="1" parent="A8wZdI5MWhzZ0q6_M2Js-1" source="RasZrJnlZ0y7fZ_Ei2is-18" target="_0hBDts88hpuU9CHLBgN-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RasZrJnlZ0y7fZ_Ei2is-18" value="clic en editar y abre formulario de edit/user" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;strokeColor=#EBEBEB;fillColor=#C9C9C9;" vertex="1" parent="A8wZdI5MWhzZ0q6_M2Js-1">
+          <mxGeometry x="510" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="oXDxpaDkGzMDVfq88sBn-1" value="Citas" style="strokeColor=none;fillColor=none;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=center;spacing=20;fontSize=14;fontColor=#999999;spacingRight=10;" parent="1" vertex="1">
           <mxGeometry x="220" y="140" width="80" height="40" as="geometry" />
