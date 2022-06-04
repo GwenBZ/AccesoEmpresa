@@ -1,0 +1,17 @@
+body{
+margin-top: 2em;
+padding: 3em;
+width: 100%;
+position: absolute;
+border-radius: 10px;
+background: rgba(red, green, blue, 0.30);
+backdrop-filter: blur(4.0px);
+}
+
+table{
+    width: 100%;
+  }
+  
+table, th, td {
+ border: 1px solid black;
+}

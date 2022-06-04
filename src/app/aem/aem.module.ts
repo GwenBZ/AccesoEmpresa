@@ -10,6 +10,7 @@ import { Citas3Component } from './citas3/citas3.component';
 import { Empresas3Component } from './empresas3/empresas3.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SolicitarCitaComponent } from './solicitar-cita/solicitar-cita.component';
+import { DepartamentosComponent } from './departamentos/departamentos.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SolicitarCitaComponent } from './solicitar-cita/solicitar-cita.componen
     Citas3Component,
     Empresas3Component,
     NavbarComponent,
-    SolicitarCitaComponent
+    SolicitarCitaComponent,
+    DepartamentosComponent
   ],
   imports: [
     CommonModule,
