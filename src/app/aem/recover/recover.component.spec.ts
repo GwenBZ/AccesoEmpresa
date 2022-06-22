@@ -1,22 +1,22 @@
 // @ts-ignore
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BorrarComponent } from './borrar.component';
+import { RecoverComponent } from './recover.component';
 
 // @ts-ignore
-describe('BorrarComponent', () => {
-  let component: BorrarComponent;
-  let fixture: ComponentFixture<BorrarComponent>;
+describe('recoverComponent', () => {
+  let component: RecoverComponent;
+  let fixture: ComponentFixture<RecoverComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BorrarComponent ]
+      declarations: [ RecoverComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BorrarComponent);
+    fixture = TestBed.createComponent(RecoverComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -31,7 +31,7 @@ function beforeEach(arg0: () => void) {
     throw new Error('Function not implemented.');
 }
 
-function expect(component: BorrarComponent) {
+function expect(component: RecoverComponent) {
     throw new Error('Function not implemented.');
 }
 
