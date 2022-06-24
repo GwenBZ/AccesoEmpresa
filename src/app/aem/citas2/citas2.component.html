@@ -88,4 +88,135 @@
   <img [src]="url" style="height:200px;width:200px;top:-320px"><br>
   <input type="file" class="form-control form-control" x-model="fileName"(change)="onselectFile({e : $event})"style="position: relative;left: 820px;top: -585px;width:500px">
 </div>
+------------------------------------------------------------------------------------------------------------------------
+crate database citas2
+use citas2
+
+create table First_Name(
+id_First_Name int not null,
+nombre varchar(25),
+primary key(id_First_Name)
+)
+
+create table Apellidos
+id_Apellidos int not null,
+Apellidos varchar(25),
+primary key(id_Apellidos)
+)
+
+create table Gmail
+id_Gmail int not null,
+Gmail varchar(30),
+primary key(id_Gmail)
+)
+
+create table Password
+id_Password int not null,
+Password varchar(10),
+primary key(id_Password)
+)
+
+create table Dirección_1
+id_Dirección1 int not null,
+Direccion varchar(50),
+primary key(id_Dirección_1)
+)
+
+create table Ciudad
+id_Ciudad int not null,
+Cuidad varchar(20),
+primary key(id_Ciudad)
+)
+
+create table Estado
+id_Estado int not null,
+Estado varchar(20),
+primary key(id_Estado)
+)
+
+create table Codigo_postals
+id_Codigo_postals int not null,
+codigo_postals varchar(5),
+primary key(id_Codigo_postals)
+)
+
+create table Numero_de_Empleado
+id_Numero_de_Empleado int not null,
+Numero_de_Empleado varchar(12),
+primary key(id_Numero_de_Empleado)
+)
+-----------------------------------
+create table usuario_rol(
+id_usuario_rol int not null,
+id_rol int,
+id_usuario int,
+primary key(id_usuario_rol),
+foreign key (id_rol) references rol(id_rol),
+foreign key(id_usuario) references usuario(id_usuario)
+)
+-----------------------------------
+
+INSERT INTO First_Name (id_First_Name, nombre) values ('','');
+INSERT INTO First_Name (id_First_Name, nombre) values ('','');
+INSERT INTO First_Name (id_First_Name, nombre) values ('','');
+INSERT INTO First_Name (id_First_Name, nombre) values ('','');
+INSERT INTO First_Name (id_First_Name, nombre) values ('','');
+
+INSERT INTO Apellidos (id_Apellidos, Apellidos) values ('','');
+INSERT INTO Apellidos (id_Apellidos, Apellidos) values ('','');
+INSERT INTO Apellidos (id_Apellidos, Apellidos) values ('','');
+INSERT INTO Apellidos (id_Apellidos, Apellidos) values ('','');
+INSERT INTO Apellidos (id_Apellidos, Apellidos) values ('','');
+
+INSERT INTO Gmail (id_Gmail, Gmail) values ('','');
+INSERT INTO Gmail (id_Gmail, Gmail) values ('','');
+INSERT INTO Gmail (id_Gmail, Gmail) values ('','');
+INSERT INTO Gmail (id_Gmail, Gmail) values ('','');
+INSERT INTO Gmail (id_Gmail, Gmail) values ('','');
+
+INSERT INTO Password (id_Password, Password) values ('','');
+INSERT INTO Password (id_Password, Password) values ('','');
+INSERT INTO Password (id_Password, Password) values ('','');
+INSERT INTO Password (id_Password, Password) values ('','');
+INSERT INTO Password (id_Password, Password) values ('','');
+
+INSERT INTO Dirección_1 (id_Dirección_1, nombre) values ('','');
+INSERT INTO Dirección_1 (id_Dirección_1, nombre) values ('','');
+INSERT INTO Dirección_1 (id_Dirección_1, nombre) values ('','');
+INSERT INTO Dirección_1 (id_Dirección_1, nombre) values ('','');
+INSERT INTO Dirección_1 (id_Dirección_1, nombre) values ('','');
+
+INSERT INTO Ciudad (id_Ciudad, Ciudad) values ('','');
+INSERT INTO Ciudad (id_Ciudad, Ciudad) values ('','');
+INSERT INTO Ciudad (id_Ciudad, Ciudad) values ('','');
+INSERT INTO Ciudad (id_Ciudad, Ciudad) values ('','');
+INSERT INTO Ciudad (id_Ciudad, Ciudad) values ('','');
+
+INSERT INTO Estado (id_Estado, Estado) values ('','');
+INSERT INTO Estado (id_Estado, Estado) values ('','');
+INSERT INTO Estado (id_Estado, Estado) values ('','');
+INSERT INTO Estado (id_Estado, Estado) values ('','');
+INSERT INTO Estado (id_Estado, Estado) values ('','');
+
+INSERT INTO Codigo_postals (id_Codigo_postals, Codigo_postals) values ('','');
+INSERT INTO Codigo_postals (id_Codigo_postals, Codigo_postals) values ('','');
+INSERT INTO Codigo_postals (id_Codigo_postals, Codigo_postals) values ('','');
+INSERT INTO Codigo_postals (id_Codigo_postals, Codigo_postals) values ('','');
+INSERT INTO Codigo_postals (id_Codigo_postals, Codigo_postals) values ('','');
+
+INSERT INTO Numero_de_Empleado (id_Numero_de_Empleado, Numero_de_Empleado) values ('','');
+INSERT INTO Numero_de_Empleado (id_Numero_de_Empleado, Numero_de_Empleado) values ('','');
+INSERT INTO Numero_de_Empleado (id_Numero_de_Empleado, Numero_de_Empleado) values ('','');
+INSERT INTO Numero_de_Empleado (id_Numero_de_Empleado, Numero_de_Empleado) values ('','');
+INSERT INTO Numero_de_Empleado (id_Numero_de_Empleado, Numero_de_Empleado) values ('','');
+
+SELECT * FROM First_Name;
+SELECT * FROM Apellidos;
+SELECT * FROM Gmail;
+SELECT * FROM Password;
+SELECT * FROM Dirección_1;
+SELECT * FROM Ciudad;
+SELECT * FROM Estado;
+SELECT * FROM Codigo_postals;
+SELECT * FROM Numero_de_Empleado;
 
