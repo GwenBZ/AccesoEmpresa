@@ -7,3 +7,4 @@ const conecta = mysqle.createConnection({
   database:'Base',
 })
 conecta.connect()
+module.exports=conecta;
