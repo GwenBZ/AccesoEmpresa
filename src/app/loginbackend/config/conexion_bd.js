@@ -6,3 +6,4 @@ const conecta = mysqle.createConnection({
   port:3306,
   database:'Base',
 })
+conecta.connect()
