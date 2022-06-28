@@ -29,3 +29,18 @@ routes.get('/:id',(req, res)=>  {
 
   });
 });
+
+//Modulo login -- Accesar
+
+routes.get('log/bd',(require,res)=> {
+  let sql = "Select * from usuarios"
+
+  //Registro Usuarios
+
+  consulta.query(sql, (err, rows) => {
+    if (!err) res.json(rows)
+    else
+      console.error(err,"ERROR-FAVOR DE VERIFICAR CODIGO");
+
+  });
+});
