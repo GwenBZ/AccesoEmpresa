@@ -16,3 +16,16 @@ routes.get('/bd',(require,res)=> {
 
   });
 });
+
+// obtener dato especifico Registro usuarios
+routes.get('/:id',(req, res)=>  {
+  const {id} = req.params
+  let sql = "Select * from usuarios where id_usuario = ?"
+
+  consulta.query(sql,[id], (err, rows) => {
+    if (!err) res.json(rows)
+    else
+      console.error(err,"ERROR-FAVOR DE VERIFICAR CODIGO");
+
+  });
+});
