@@ -1,6 +1,7 @@
 const ruta = require('express').Router();
 const conecta = require('../config/conexion');
 
+
 //ver depas
 ruta.get('/Departamentos', (req, res) => {
     let sql = 'select * from departamento';
@@ -23,7 +24,6 @@ ruta.get('/Departamentos/:id', (req, res) => {
         }
     })
 });
-
 
 
 module.exports = ruta;
