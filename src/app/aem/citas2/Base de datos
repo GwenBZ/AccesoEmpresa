@@ -21,7 +21,7 @@ select * from citas;
 update citas set id_usuario=2
 where id_usuario=8;
 ------------------------------------------------------------------------------------------------------------------------
-Codigo
+get citas
 const ruta = require('express').Router();
 const conecta = require('../config/conexion');
 
