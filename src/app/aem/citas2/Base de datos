@@ -55,4 +55,4 @@ console.log('servidor iniciado en el prueto: '+port)
   })
 //rutass
 app.use('/Cita', require('./rutas/rutas'));
-
+1
