@@ -3,3 +3,6 @@ id_Empleado INT NOT NULL,id_Usuario INT NOT NULL, id_Horario INT NOT NULL,
 primary key(id_cita), foreign key(id_Empleado)
 references Empleado(id_Empleado),foreign key(id_Usuario) references
 Usuario(id_usuario));
+
+
+select * from Citas;
