@@ -183,3 +183,23 @@ routes.post('/log/',(req, res)=>{
   });
 });
 
+//editar
+
+routes.put('/log/:id',(req,res)=>{
+  const {id}=req.params
+  const{id_usuario, usuario, contraseña}= req.body
+  let sql = `update registrar set
+    id_usuario ='${id_usuario}',
+        usuario ='${usuario}',
+        contraseña='${contraseña}'
+        where id_usuario= '${id}'`
+  consulta.query(sql, (err, rows)=> {
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato modificado'})
+    }
+
+  });
+
+});
+
