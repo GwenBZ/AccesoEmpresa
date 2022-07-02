@@ -170,3 +170,16 @@ routes.delete('/log/:id',(req,res)=>{
   });
 });
 
+//AGREGAR DATOS
+routes.post('/log/',(req, res)=>{
+  const{id_usuario, usuario, contraseña}= req.body
+  let sql = `insert into registrar(id_usuario, usuario, contraseña) values('${id_usuario}','${usuario}','${contraseña}')`
+  consulta.query(sql, (err, rows)=> {
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato agregado'})
+    }
+
+  });
+});
+
