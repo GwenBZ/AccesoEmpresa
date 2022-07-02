@@ -97,4 +97,15 @@ routes.delete('/bd/:id',(req,res)=>{
   });
 });
 
+//AGREGAR DATOS a tabla rol
+routes.post('/',(req, res)=>{
+  const{id_rol,descripcion}= req.body
+  let sql = `insert into rol(id_rol,descripcion) values('${id_rol}','${descripcion}')`
+  consulta.query(sql, (err, rows)=> {
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato agregado'})
+    }
+  });
+});
 
