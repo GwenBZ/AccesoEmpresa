@@ -253,3 +253,36 @@ routes.post('/log2/',(req, res)=>{
   });
 });
 
+//editar tabla usuario externo
+routes.put('/log2/:id',(req,res)=>{
+  const {id}=req.params
+  const{id_usuario, nombre, apellido, email, direccion, ciudad, estado, codigo_postal, departamento, fecha,id_registrar,id_rol,contraseña,id_departamentos}= req.body
+
+  let sql = `update usuario_externo set
+    id_usuario ='${id_usuario}',
+        nombre ='${nombre}',
+        apellido='${apellido}',
+        email= '${email}',
+        direccion='${direccion}',
+        ciudad='${ciudad}',
+        estado='${estado}',
+        codigo_postal='${codigo_postal}',
+        departamento='${departamento}',
+        fecha='${fecha}',
+        id_registrar='${id_registrar}',
+        id_rol = '${id_rol}',
+        contraseña = '${contraseña}',
+        id_departamentos = '${id_departamentos}'
+        where id_usuario= '${id}'`
+
+  consulta.query(sql, (err, rows)=> {
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato modificado'})
+    }
+
+  });
+
+});
+
+module.exports = routes;
