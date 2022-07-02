@@ -57,7 +57,7 @@ ruta.put('/Citas/:id', (req, res) => {
       res.json({ status: ' modificado' })
     }
   })
-});;
+});;;
 
 
 module.exports = ruta;
