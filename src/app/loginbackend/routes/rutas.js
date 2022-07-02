@@ -227,3 +227,16 @@ routes.get('/log2/:id',(req, res)=>  {
   });
 });
 
+//eliminar tabla usuario externo
+routes.delete('/log2/:id',(req,res)=>{
+  const{id}=req.params
+  let sql =`delete from usuario_externo where id_usuario = '${id}'`
+  consulta.query(sql, (err, rows)=> {
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato eliminado'})
+    }
+
+  });
+});
+
