@@ -143,3 +143,17 @@ routes.get('/bd/log',(require,res)=> {
   });
 });
 
+///login/log/1
+// obtener dato especifico tabla registrar
+routes.get('/log/:id',(req, res)=>  {
+  const {id} = req.params
+  let sql = "Select * from registrar where id_usuario = ?"
+
+  consulta.query(sql,[id], (err, rows) => {
+    if (!err) res.json(rows)
+    else
+      console.error(err,"ERROR-FAVOR DE VERIFICAR CODIGO");
+
+  });
+});
+
