@@ -203,3 +203,14 @@ routes.put('/log/:id',(req,res)=>{
 
 });
 
+//Tabla usuario externo
+
+routes.get('/bd/log2',(require,res)=> {
+  let sql = "Select * from usuario_externo"
+  consulta.query(sql, (err, rows) => {
+    if (!err) res.json(rows)
+    else
+      console.error(err,"ERROR-FAVOR DE VERIFICAR CODIGO");
+  });
+});
+
