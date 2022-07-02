@@ -157,3 +157,16 @@ routes.get('/log/:id',(req, res)=>  {
   });
 });
 
+//eliminar
+routes.delete('/log/:id',(req,res)=>{
+  const{id}=req.params
+  let sql =`delete from registrar where id_usuario = '${id}'`
+  consulta.query(sql, (err, rows)=> {
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato eliminado'})
+    }
+
+  });
+});
+
