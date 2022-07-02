@@ -1,59 +1,13 @@
-//Base de datos
-id_usuario varchar(4) not null,
-nombre varchar(30),
-ap_Apellidos varchar(50),
-Gmail varchar(30),
-Password varchar(20),
-Direccion1 varchar(50),
-Cuidad varchar(30),
-Estado varchar(30),
-Codigo_postals varchar(5),
-Numero_de_Empleado varchar(10),
-primary key(id_usuario));
-
-insert into citas values('1', 'Jorge fabian','Hernandez Sahagun', 'sahagunjorge59@gmail', 33432324,'calle zapotecas','Miguel Hidalgo', 'Benito Juarez', '55490','0394303');
-insert into citas values('2', 'Jorge fabian','Hernandez Sahagun', 'sahagunjorge59@gmail', 33432324,'calle zapotecas','Miguel Hidalgo', 'Benito Juarez', '55490','0394303');
-insert into citas values('3', 'Jorge fabian','Hernandez Sahagun', 'sahagunjorge59@gmail', 33432324,'calle zapotecas','Miguel Hidalgo', 'Benito Juarez', '55490','0394303');
-insert into citas values('4', 'Jorge fabian','Hernandez Sahagun', 'sahagunjorge59@gmail', 33432324,'calle zapotecas','Miguel Hidalgo', 'Benito Juarez', '55490','0394303');
-insert into citas values('5', 'Jorge fabian','Hernandez Sahagun', 'sahagunjorge59@gmail', 33432324,'calle zapotecas','Miguel Hidalgo', 'Benito Juarez', '55490','0394303');
-insert into citas values('6', 'Jorge fabian','Hernandez Sahagun', 'sahagunjorge59@gmail', 33432324,'calle zapotecas','Miguel Hidalgo', 'Benito Juarez', '55490','0394303');
-select * from citas;
-update citas set id_usuario=2
-where id_usuario=8;
-------------------------------------------------------------------------------------------------------------------------
-Codigo
-const ruta = require('express').Router();
-const conecta = require('../config/conexion');
+create table Citas(id_cita INT auto_increment  NOT NULL,
+id_Empleado INT NOT NULL,id_Usuario INT NOT NULL, id_Horario INT NOT NULL,
+primary key(id_cita), foreign key(id_Empleado)
+references Empleado(id_Empleado),foreign key(id_Usuario) references
+Usuario(id_usuario));
 
 
-//ver citas
-ruta.get('/Citas', (req, res) => {
-let sql = ' select * from citas';
-conecta.query(sql, (err, rows) => {
-if (!err) res.json(rows);
-else {
-console.log('error');
-}
-})
-});
--------------------------------------------------------------------------------------------------------
-Conexion
-const express = require('express');
-const app = express();
-const port = (process.env.port || 3000);
-//admitir
-app.use(express.json())
-
-app.set('port', port);
-//inicializar express
-
-app.listen(app.get('port'),(error)=>{
-if(error)
-{console.log('error al iniciar el servidor: '+error)}
-else{
-console.log('servidor iniciado en el prueto: '+port)
-}
-  })
-//rutass
-app.use('/Cita', require('./rutas/rutas'));
-1
+select * from Citas;
+insert into citas (id_empleado,id_Usuario,id_horario)
+ values('5','2','10'),
+	   ('1','5','11'),
+	   ('2','6','12'),
+	    ('2','6','12');
