@@ -128,3 +128,18 @@ routes.put('/:id',(req,res)=>{
 });
 
 
+//Tabla registrar
+// /login/bd/log
+routes.get('/bd/log',(require,res)=> {
+  let sql = "Select * from registrar"
+
+  //Registro Usuarios
+
+  consulta.query(sql, (err, rows) => {
+    if (!err) res.json(rows)
+    else
+      console.error(err,"ERROR-FAVOR DE VERIFICAR CODIGO");
+
+  });
+});
+
