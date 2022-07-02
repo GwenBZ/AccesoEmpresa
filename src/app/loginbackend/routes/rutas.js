@@ -84,6 +84,17 @@ routes.get('/:id',(req, res)=>  {
 });
 
 
+//eliminar un dato de la Tabla rol
+routes.delete('/bd/:id',(req,res)=>{
+  const{id}=req.params
+  let sql =`delete from rol where id_rol = '${id}'`
+  consulta.query(sql, (err, rows)=> {
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato eliminado'})
+    }
 
+  });
+});
 
 
