@@ -240,3 +240,16 @@ routes.delete('/log2/:id',(req,res)=>{
   });
 });
 
+//AGREGAR DATOS usuario externo
+routes.post('/log2/',(req, res)=>{
+  const{id_usuario, nombre, apellido, email, direccion, ciudad, estado, codigo_postal, departamento, fecha,id_registrar,id_rol,contraseña,id_departamentos}= req.body
+  let sql = `insert into usuario_externo(id_usuario, nombre, apellido, email, direccion, ciudad, estado, codigo_postal, departamento, fecha,id_registrar,id_rol,contraseña,id_departamentos) values('${id_usuario}','${nombre}','${apellido}','${email}','${direccion}','${ciudad}','${estado}','${codigo_postal}','${departamento}','${fecha}','${id_registrar}','${id_rol}','${contraseña}','${id_departamentos}')`
+  consulta.query(sql, (err, rows)=> {
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato agregado'})
+    }
+
+  });
+});
+
