@@ -58,5 +58,15 @@ routes.get('/:id',(req, res)=>  {
   });
 });
 
+//Tabla Rol
+
+routes.get('/bd',(require,res)=> {
+  let sql = "Select * from rol"
+  consulta.query(sql, (err, rows) => {
+    if (!err) res.json(rows)
+    else
+      console.error(err,"ERROR-FAVOR DE VERIFICAR CODIGO");
+  });
+});
 
 
