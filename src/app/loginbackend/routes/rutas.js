@@ -214,3 +214,16 @@ routes.get('/bd/log2',(require,res)=> {
   });
 });
 
+///login/log/1
+// obtener dato especifico tabla usuarios externos
+routes.get('/log2/:id',(req, res)=>  {
+  const {id} = req.params
+  let sql = "Select * from usuario_externo where id_usuario = ?"
+
+  consulta.query(sql,[id], (err, rows) => {
+    if (!err) res.json(rows)
+    else
+      console.error(err,"ERROR-FAVOR DE VERIFICAR CODIGO");
+  });
+});
+
