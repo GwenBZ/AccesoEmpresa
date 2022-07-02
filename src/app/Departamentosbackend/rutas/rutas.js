@@ -24,6 +24,44 @@ ruta.get('/Departamentos/:id', (req, res) => {
         }
     })
 });
+//agregar
+ruta.post('/Departamentos', (req, res) => {
+    const { descripcion } = req.body;
+
+    let sql = `insert into departamento(descripcion) values ( '${descripcion}') `
+    conecta.query(sql, (err, rows) => {
+        if (err) throw err
+        else {
+            res.json({ status: 'Departamento agregado' })
+        }
+    })
+});
+
+//eliminar 
+ruta.delete('/Departamentos/:id', (req, res) => {
+    const { id } = req.params;
+    let sql = `delete from departamento where id_Departamento = '${id}'`;
+    conecta.query(sql, (err, rows) => {
+        if (err) throw err
+        else {
+            res.json({ status: 'Departamento eliminado' })
+        }
+    })
+});
+
+// modificar
+ruta.put('/Departamentos/:id', (req, res) => {
+    const { id } = req.params;
+    const { descripcion } = req.body;
+    let sql = `update departamento set descripcion ='${descripcion}' where id_Departamento = '${id}'`;
+    conecta.query(sql, (err, rows) => {
+        if (err) throw err
+        else {
+            res.json({ status: 'Dep modificado' })
+        }
+    })
+});
+//-----------------
 
 
 module.exports = ruta;
