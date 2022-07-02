@@ -6,3 +6,8 @@ Usuario(id_usuario));
 
 
 select * from Citas;
+insert into citas (id_empleado,id_Usuario,id_horario)
+ values('5','2','10'),
+	   ('1','5','11'),
+	   ('2','6','12'),
+	    ('2','6','12');
