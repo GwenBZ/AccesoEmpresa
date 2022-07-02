@@ -109,3 +109,22 @@ routes.post('/',(req, res)=>{
   });
 });
 
+//editar datos de tabla rol
+
+routes.put('/:id',(req,res)=>{
+  const {id}=req.params
+  const{id_rol,descripcion}= req.body
+  let sql = `update rol set
+    id_rol='${id_rol}',
+    descripcion='${descripcion}'
+    where id_rol= '${id}'`
+
+  consulta.query(sql, (err, rows)=>{
+    if (!err) res.json(rows)
+    else{
+      res.json({status: 'dato modificado'})
+    }
+  });
+});
+
+
