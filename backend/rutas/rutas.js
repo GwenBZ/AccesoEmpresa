@@ -6,6 +6,17 @@ const consulta=require('../Config/conexionbd');
 ruta.get("/reg",(require,res)=>{res.send("Ruta login");
 });
 
+ruta.get('/fechas',(req,res)=>{
+
+    let sql="select dias_fecha2.id_fecha as identificador,dias_semana.dia_mes,dias_numero.dia,meses.mes from dias_fecha2,dias_numero,dias_semana,meses where dias_fecha2.id_diasem=dias_semana.id_diasem and dias_numero.id_dianum=dias_fecha2.id_dianum and dias_fecha2.id_mes=meses.id_mes order by dias_numero.dia"
+    
+    consulta.query(sql,(err,rows)=>{
+        if (!err) res.json(rows)
+        else
+        console.error(err)
+    })
+})
+
 
 ruta.get('/bd',(req,res)=>{
    
