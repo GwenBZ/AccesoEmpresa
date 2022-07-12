@@ -13,3 +13,6 @@ getDatos()
 {
   return this.http.get(this.url);
 }
+getdato(id:string){
+  return this.http.get(this.url+'/'+id);
+}
