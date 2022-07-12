@@ -13,4 +13,18 @@ export class ConsultarComponent implements OnInit {
 
   constructor(private EquipoService:EquipoService, private router: Router) {
 
+  }ngOnInit(): void {
+    this.listarDatos();
   }
+
+  listarDatos() {
+    this.EquipoService.getDatos().subscribe(
+      res => {
+        console.log(res)
+        this.ListarDatos = <any>res;
+      },
+      err => console.log(err)
+    );
+  }
+
+}
