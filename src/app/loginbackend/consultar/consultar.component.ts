@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {EquipoService,Datos} from '../../SERVICES/equipo.service'
 
 @Component({
   selector: 'app-consultar',
