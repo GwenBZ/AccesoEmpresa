@@ -29,6 +29,6 @@ export class ConsultarComponent implements OnInit {
       err => console.log(err)
     );
 
-  }
+
 
 }
