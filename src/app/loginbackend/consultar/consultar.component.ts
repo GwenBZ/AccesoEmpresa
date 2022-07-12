@@ -9,9 +9,8 @@ import {EquipoService,Datos} from '../../SERVICES/equipo.service'
 })
 export class ConsultarComponent implements OnInit {
 
-  constructor() { }
+  ListarDatos: Datos[];
 
-  ngOnInit(): void {
+  constructor(private EquipoService:EquipoService, private router: Router) {
+
   }
-
-}
