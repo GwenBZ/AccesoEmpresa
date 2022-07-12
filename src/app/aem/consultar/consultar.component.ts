@@ -29,5 +29,4 @@ export class ConsultarComponent implements OnInit {
     );
   }
 
-
 }
