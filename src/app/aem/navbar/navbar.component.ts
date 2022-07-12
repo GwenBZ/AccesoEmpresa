@@ -24,6 +24,9 @@ export class NavbarComponent implements OnInit {
   Solicitarcita(){
     this.route.navigate(['/navbar/Solicitarcita']);
   }
+  Roles() {
+    this.route.navigate(['/navbar/Roles']);
+  }
   Salir(){
     this.route.navigate(['/navbar/Salir']);
 
