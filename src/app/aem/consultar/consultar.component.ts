@@ -19,16 +19,15 @@ export class ConsultarComponent implements OnInit {
     this.listarDatos();
   }
 
-  listarDatos()
-  {
+  listarDatos() {
     this.EquipoService.getDatos().subscribe(
-      res=>{
+      res => {
         console.log(res)
-        this.ListarDatos=<any>res;
+        this.ListarDatos = <any>res;
       },
       err => console.log(err)
     );
-
+  }
 
 
 }
