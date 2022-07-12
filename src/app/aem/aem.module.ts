@@ -10,6 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SolicitarCitaComponent } from './solicitar-cita/solicitar-cita.component';
 import { ConsultarComponent } from './consultar/consultar.component';
 import { RecoverComponent } from './recover/recover.component';
+import { EditarEmpleadoComponent } from './editar-empleado/editar-empleado.component';
+import { EmpleadoComponent } from './empleado/empleado.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { RecoverComponent } from './recover/recover.component';
     RegistrarComponent,
     NavbarComponent,
     SolicitarCitaComponent,
-    ConsultarComponent
+    ConsultarComponent,
+    EditarEmpleadoComponent,
+    EmpleadoComponent
 
   ],
   imports: [
