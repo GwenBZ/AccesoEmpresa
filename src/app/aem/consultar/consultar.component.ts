@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {EquipoService,Datos} from '../../SERVICES/equipo.service'
 
 @Component({
   selector: 'app-consultar',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consultar.component.css']
 })
 export class ConsultarComponent implements OnInit {
+
+  ListarDatos: Datos[];
 
   constructor() { }
 
