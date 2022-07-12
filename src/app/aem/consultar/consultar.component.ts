@@ -11,7 +11,7 @@ export class ConsultarComponent implements OnInit {
 
   ListarDatos: Datos[];
 
-  constructor() { }
+  constructor(private EquipoService:EquipoService, private router: Router) { }
 
   ngOnInit(): void {
   }
