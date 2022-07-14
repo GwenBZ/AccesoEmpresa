@@ -1,0 +1,49 @@
+<div class="container1">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">ID USUARIO</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Email</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Ciudad</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Codigo Postal</th>
+      <th scope="col">Departamento</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Id_registrar</th>
+      <th scope="col">Id_rol</th>
+      <th scope="col">Contraseña</th>
+      <th scope="col">Id_departamento</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let datos of ListarDatos">
+      <th>{{datos.id_usuario}}</th>
+      <td>{{datos.nombre}}</td>
+      <td>{{datos.apellido}}</td>
+      <td>{{datos.email}}</td>
+      <td>{{datos.direccion}}</td>
+      <td>{{datos.ciudad}}</td>
+      <td>{{datos.estado}}</td>
+      <td>{{datos.codigo_postal}}</td>
+      <td>{{datos.departamento}}</td>
+      <td>{{datos.fecha}}</td>
+      <td>{{datos.id_registrar}}</td>
+      <td>{{datos.id_rol}}</td>
+      <td>{{datos.contra}}</td>
+      <td>{{datos.id_departamentos}}</td>
+      <td>
+        <button routerLink="/Editar" (click)="modificar(datos.id_usuario)" type="button" class="btn btn-primary">Editar</button>
+      </td>
+      <td>
+        <button (click)="eliminar(datos.id_usuario)"  type="button" class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
