@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <p>Modificar Empleado: {{empleado[0].id_empleado}}</p>
+  <div class="row">
+    <div class="col-sm-3">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Nombre de Empleado</label>
+          <input [(ngModel)]="empleado[0].nombre" type="text" class="form-control" name="nombre">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Apellido Paterno</label>
+          <input [(ngModel)]="empleado[0].ap_paterno" type="text" class="form-control" name="apellidoP">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Apellido Materno</label>
+          <input [(ngModel)]="empleado[0].ap_materno" type="text" class="form-control" name="apellidoM">
+        </div>
+      </form>
+    </div>
+
+    <div class="col-sm-3">
+      <form>
+
+        <div class="mb-3">
+          <label>Sexo</label>
+          <select (change)="onSelectedSexo($event)" class="form-select">
+            <option [value]="sexoEmpleado">{{this.sexoEmpleado}}</option>
+            <option [value]="sexoEmpleado2">{{this.sexoEmpleado2}}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label >Fecha de nacimiento</label>
+          <input data-date-format="YYYY MMMM DD" value="1997-08-09" min="1990-01-01" max="2010-12-31" type="date" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input [(ngModel)]="empleado[0].correo" type="email" class="form-control" name="email">
+
+        </div>
+
+        <div class="mb-3">
+          <label lass="form-label">Telefono</label>
+          <input [(ngModel)]="empleado[0].telefono" type="tel" class="form-control" name="telefono">
+        </div>
+
+      </form>
+    </div>
+
+    <div class="col-sm-3">
+      <form>
+
+        <div class="mb-3">
+          <label class="form-label">Colonia</label>
+          <input [(ngModel)]="empleado[0].colonia" type="text" class="form-control" name="colonia">
+          <div class="mb-3">
+            <label class="form-label">Calle</label>
+            <input [(ngModel)]="empleado[0].calle" type="text" class="form-control" name="calle">
+          </div>
+          <div class="mb-3">
+            <label lass="form-label">Cp</label>
+            <input [(ngModel)]="empleado[0].cp" type="text" class="form-control" name="cp">
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="col-sm-3">
+      <form>
+        <div class="input-field col s6"><br>
+          <label >Departamento</label>
+          <select   (change)="onSelected($event)" class="form-select" >
+            <option *ngFor="let item of ListarDepartamento" [value]="item.id_Departamento">{{item.id_Departamento}} {{item.descripcion}}</option>
+          </select>
+        </div>
+        <div class="input-field col s6"><br>
+          <label >Rol</label>
+          <select   (change)="onSelectedRoles($event)" class="form-select" >
+            <option *ngFor="let item of ListarRoles" [value]="item.id_roles">{{item.id_roles}} {{item.descripcion}}</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="row">
+    <button (click)="modificar()" class="btn btn-primary">Guardar</button>
+  </div>
+</div>
+

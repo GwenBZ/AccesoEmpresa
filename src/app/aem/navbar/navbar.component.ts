@@ -15,8 +15,8 @@ export class NavbarComponent implements OnInit {
   Registrar() {
     this.route.navigate(['/navbar/Registrar']);
   }
-  Citas(){
-    this.route.navigate(['/navbar/Citas']);
+  Empleado(){
+    this.route.navigate(['/navbar/empleado']);
   }
   Citas2(){
     this.route.navigate(['/navbar/Citas2']);

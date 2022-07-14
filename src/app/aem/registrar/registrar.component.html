@@ -7,86 +7,96 @@
 </div>
 
 <form [formGroup]="datos">
-<div class="container">
-  <div class="row">
-    <div class="input-field col s6"><br>
-      <label for="first_name">First Name</label>
-      <input formControlName="firstName"  id="first_name" type="text" class="validate" required>
-    </div>
-
-    <div class="input-field col s6"><br>
-      <label for="last_name">Apellidos</label>
-      <input formControlName="apellido"  id="last_name" type="text" class="validate" required>
-    </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s6"><br>
-      <label for="first_name">Email</label>
-      <input formControlName="nombre"  id="email" type="text" class="validate" required>
-    </div>
-    <div class="input-field col s6"><br>
-      <label for="last_name">Password</label>
-      <input formControlName="password" id="password" type="text" class="validate" required>
-    </div>
+  <div class="container">
     <div class="row">
       <div class="input-field col s6"><br>
-        <label for="first_name">Dirección 1</label>
-        <input id="direccion1" type="text" class="validate" required>
+        <label for="first_name">First Name</label>
+        <input [(ngModel)]="empleado.nombre" id="first_name" formControlName="firstName" type="text" class="validate" required>
       </div>
-      <div class="row">
-        <div class="input-field col s6"><br>
-          <label for="first_name">Ciudad</label>
-          <input id="ciudad" type="text" class="validate" required>
-        </div>
-        <div class="input-field col s6"><br>
-          <label for="first_name">Estado</label>
-          <input id="estado" type="text" class="validate" required>
-        </div>
-        <div class="input-field col s6"><br>
-          <label for="first_name">Codigo postal</label>
-          <input id="codigo postal" type="text" class="validate" required>
-        </div>
 
+      <div class="input-field col s3"><br>
+        <label for="last_namep">Apellido Paterno</label>
+        <input [(ngModel)]="empleado.ap_paterno" id="last_namep" formControlName="apellidop" type="text" class="validate" required>
       </div>
-      <div class="container4">
-        <label for="first_name">Numero de Empleado</label>
-        <input formControlName="numeroEmpleado" id="Numero de Empleado" type="text" class="validate" required>
+      <div class="input-field col s3"><br>
+        <label for="last_namem">Apellido Materno</label>
+        <input [(ngModel)]="empleado.ap_materno" id="last_namem" formControlName="apellidom" type="text" class="validate" required>
       </div>
     </div>
-    <div class="container2">
+    <div class="row">
+      <div class="input-field col s12"><br>
+        <label for="email">Email</label>
+        <input [(ngModel)]="empleado.correo" id="email" formControlName="nombre" type="email" class="validate" required>
+      </div>
+
       <div class="row">
-        <div class="input-field col s6"><br>
-          <label for="first_name">Departamento</label>
-          <select class="form-select" id="state" required="">
-            <option value=""></option>
-            <option>Recursos Humanos</option>
-            <option>Departamento de Marketing</option>
-            <option>Departamento de Compras</option>
+        <div class="input-field col s4"><br>
+          <label for="telefono">Telefono</label>
+          <input [(ngModel)]="empleado.telefono" id="telefono" formControlName="telefono" type="tel" class="validate" required>
+        </div>
+
+        <div class="input-field col s4"><br>
+          <label>Sexo</label>
+          <select (change)="onSelectedSexo($event)" class="form-select">
+            <option [value]="f">F</option>
+            <option [value]="m">M</option>
           </select>
         </div>
+        <div class="input-field col s4"><br>
+          <label >Fecha de nacimiento</label>
+          <input data-date-format="YYYY MMMM DD" value="1997-08-09" min="1990-01-01" max="2010-12-31" type="date">
+        </div>
+        <div class="row">
+          <div class="input-field col s6"><br>
+            <label >Colonia</label>
+            <input [(ngModel)]="empleado.colonia" id="colonia" type="text" >
+          </div>
+          <div class="input-field col s6"><br>
+            <label for="calle">Calle</label>
+            <input [(ngModel)]="empleado.calle" formControlName="calle" id="calle" type="text" class="validate">
+          </div>
+
+          <div class="input-field col s6"><br>
+            <label >Codigo Postal</label>
+            <input [(ngModel)]="empleado.cp" id="codigo postal" type="text" class="validate" required>
+          </div>
+
+        </div>
+
       </div>
-      <div class="container3">
-        <img src="https://qrcode.tec-it.com/API/QRCode?data=smsto%3a555-555-5555%3aGenerador+de+C%c3%b3digos+QR+de+TEC-IT">
-      </div>
-      <div class="container5">
-        <div>
-          <input id="box1" type="checkbox" style="width:  50px; position: relative;" />
-          <label for="box1">Registrar Usuarios</label>
-          <input id="box2" type="checkbox"style="width:  50px; position: relative;" />
-          <label for="box2">Administrar Citas</label>
-          <input id="box3" type="checkbox"style="width:  50px; position: relative;" />
-          <label for="box3">Registrar Citas</label>
-          <input id="box4" type="checkbox"style="width:  50px; position: relative;" />
-          <label for="box4">Editar Usuarios</label>
+
+      <div class="container2">
+        <div class="row">
+          <div class="input-field col s6"><br>
+            <label >Departamento</label>
+            <select   (change)="onSelected($event)" class="form-select" >
+              <option *ngFor="let item of ListarDepartamento" [value]="item.id_Departamento">{{item.id_Departamento}} {{item.descripcion}}</option>
+            </select>
+          </div>
+          <div class="input-field col s6"><br>
+            <label >Rol</label>
+            <select   (change)="onSelectedRoles($event)" class="form-select" >
+              <option *ngFor="let item of ListarRoles" [value]="item.id_roles">{{item.id_roles}} {{item.descripcion}}</option>
+            </select>
+          </div>
+          <div class="row d-grid gap-3"><br>
+            <button [disabled]="datos.invalid" (click)="agregar()" type="submit" class="btn btn-primary">Agregar</button>
+            <button (click)="verLista()" type="submit" class="btn btn-primary">Ver</button>
+
+
+          </div>
         </div>
       </div>
-      <button  [disabled]="datos.invalid"  style="top: -90px; position: relative" class="btn-primary">SIGN IN </button>
+      <div class="container2">
+        <img src="https://qrcode.tec-it.com/API/QRCode?data=smsto%3a555-555-5555%3aGenerador+de+C%c3%b3digos+QR+de+TEC-IT">
+      </div>
+
+
+
+    </div>
+    <div class="container5">
+      <img [src]="url" style="height:200px;width:200px;"><br>
+      <input type="file" class="form-control form-control" x-model="fileName"(change)="onselectFile({e : $event})"style="position: relative;left: 820px;top: -285px;width:500px">
     </div>
   </div>
-</div>
 </form>
-
-<div class="container6">
-  <img [src]="url" style="height:200px;width:200px;top:-320px"><br>
-  <input type="file" class="form-control form-control" x-model="fileName"(change)="onselectFile({e : $event})"style="position: relative;left: 820px;top: -585px;width:500px">
-</div>
