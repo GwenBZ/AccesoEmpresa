@@ -4,7 +4,7 @@
     }
     
     #container{
-    background-color: white;
+    background-color: rgba(red, green, blue, 10);
     width: 1000px;
     margin-top: 2%;
     margin-left: 20%;
