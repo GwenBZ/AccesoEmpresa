@@ -1,0 +1,22 @@
+<form class="d-flex">
+</form>
+<header class="Cabecera">
+    <div class="modal-header">
+        <h5 class="modal-title">Empleados Departamentos</h5>
+    </div>
+</header>
+<table class="table table-bordered table-">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Empleado</th>
+            <th scope="col">Departamento</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of ListaemplDep;let i=index">
+        <tr>
+            <td> {{item.nombre}} {{item.ap_paterno}} {{item.ap_materno}}</td>
+            <td>{{item.descripcion}} </td>
+      
+        </tr>
+    </tbody>
+</table>
