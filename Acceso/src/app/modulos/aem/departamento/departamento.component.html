@@ -1,0 +1,43 @@
+<mat-card-actions>
+    <button  mat-raised-button (click)="add()"  color="primary">Agregar Nuevo</button>
+  </mat-card-actions>
+  <header class="Cabecera">
+    <div class="modal-header">
+      <h5 class="modal-title">Departamentos</h5>
+    </div>
+  </header>
+  <table class="table table-bordered table-">
+    <thead  class="thead-dark">
+    <tr>
+            <th scope="col">Id</th>
+            <th scope="col"> Descripción</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of ListaDep;let i=index">
+          <tr >
+            <td >{{item.id_Departamento}}</td>
+            <td>{{item.descripcion}}</td>
+            <td>
+              <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#modalNuevo" (click)="compModificar(item.id_Departamento)">
+                <form class="d-flex">
+                  <div class="form-group">
+                    <label>Nombre del Departamento: </label>
+                        <input [(ngModel)]="departamento.descripcion"  placeholder="RH" name="departamento" required />
+                </div>
+                </form>
+                <i class="fas fa-edit"></i>
+                <img src="assets/edit.png">
+              </button> &nbsp;
+            </td>
+            <td>
+              <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#modalEliminar" (click)="Eliminar(item.id_Departamento,i)">
+                <i class="fas fa-trash-alt"></i>
+                <img src="assets/delete.png">
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
