@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<HTML>
+    <head >
+      <title>Centro de citas </title>
+      
+    </head>
+    <body>
+    
+   
+    <h1 style="text-align:center; margin-top:2% ">Administracion de citas</h1>    
+
+    <div id="input">
+    
+            <div class="card-body">
+              <form>
+       
+                <div class="form-group">
+                    <label class="form-label">Asignacion de id</label>
+                    <input [(ngModel)]="newregistro.id_citav" type="text" class="form-control" name="id_citav"> 
+               
+                  </div>
+                <br>
+
+                <div class="form-group">
+                  <label class="form-label">Nombre de Visitante</label>
+                  <input [(ngModel)]="newregistro.nombrev" type="text" class="form-control" name="nombrev"> 
+             
+                </div>
+              <br>
+        
+                <div class="form-group">        
+                  <label for="exampleFormControlInput1">Correo</label>
+                  <input [(ngModel)]="newregistro.correov" type="text" class="form-control" name="correov"> 
+                </div>
+               
+        
+                <br>
+                <div class="form-group">
+                 
+                  <label for="exampleFormControlInput1">Identificador de fecha</label>
+                  <input [(ngModel)]="newregistro.id_fechasv" type="text" class="form-control" name="fecha"> 
+                </div>
+                <br>
+
+                <div class="form-group">
+                 
+                  <label for="exampleFormControlInput1">Tiempo para cita</label>
+                  <input [(ngModel)]="newregistro.tiempo_citav" type="text" class="form-control" name="Tiempo"> 
+                </div>
+                <br>
+                <div class="form-group">
+                <a style="margin-left:20px ;"(click)="InsertDato()" href="#" class="btn btn-primary">Agregar</a> 
+                <a style="margin-left:20px; background-color:red;"(click)="UpdateDato()" href="#" class="btn btn-primary">Actualizar</a> 
+
+                </div>
+        
+                
+              </form>
+            </div>
+    
+        
+
+         
+              <!-- <a style="margin-left:20px ;"(click)="InsertDato()" href="#" class="btn btn-primary">Agregar</a> -->
+              <br>
+              <!-- <a style="margin-left:20px; margin-top: 15px;"(click)="UpdateDato()" href="#" class="btn btn-primary">Editar</a> -->
+
+
+    <div id="container" >
+      <h2 style="text-align:center" >Fechas Disponibles</h2>
+      <table>
+        
+      <tr>
+        <td>Identificador</td>
+        <td>Nombre</td>
+        <td>Correo </td>
+        <td>Empleado</td>
+        <td>Dia </td>
+        <td>Tiempo Asignado</td>
+        <td></td>
+      
+      </tr> 
+      <tr *ngFor= "let i of lista">
+       
+        <td>{{i.id_cita}}</td>
+        <td>{{i.nombre}}</td>
+        <td>{{i.correo}}</td>
+        <td>{{i.empleado}}</td>
+        <td>{{i.dia}}</td>
+        <td>{{i.tiempo_cita}}</td>
+        
+      <td><button (click)="Delete(i.id_cita)" type="button" class="btn btn-primary">Borrar</button> </td> 
+     
+    </tr>
+       <!-- <tr *ngFor= "let i of lista">
+       
+        <td>{{i.Identificador}}</td>
+        <td>{{i.nombre}}</td>
+        <td>{{i.dia}}</td>
+        <td>{{i.inicial}}</td>
+        <td>{{i.final}}</td>
+        
+         <td><button (click)="Delete(i.Identificador)" type="button" class="btn btn-primary">Borrar</button> </td> 
+      </tr> 
+     -->
+    </table>
+    </div>
+  </div>   
+  </body>
+</HTML>

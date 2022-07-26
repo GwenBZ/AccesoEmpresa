@@ -98,4 +98,69 @@ ruta.get('/Departamento/Empleados', (req, res) => {
     })
 });
 
+
+
+
+
+//////////////////////////////////////Citas Alerno
+ruta.get('/cita',(req,res)=>{
+
+    let sql="select id_cita,cita.nombre,correo,usuario_externo.nombre as empleado,fechas.dia,tiempo_cita from cita,fechas,usuario_externo where fechas.id_fecha=cita.id_fechas and fechas.id_usuario=usuario_externo.id_usuario;"
+
+    consulta.query(sql,(err,rows)=>{
+        if (!err) res.json(rows)
+        else
+        console.error(err)
+    })
+})
+
+
+
+ruta.post('/crear/cita',(req,res)=>{
+    console.log(req.body);
+    const {id_citav,nombrev,correov,id_fechasv,tiempo_citav}= req.body;  
+    console.log(req.nombrev);
+        
+      let query="insert into cita (id_cita,nombre,correo,id_fechas,tiempo_cita) values('"+id_citav+"','"+nombrev+"','"+correov+"','"+id_fechasv+"','"+tiempo_citav+"');"
+
+      consulta.query(query,(err,rows)=>{
+          if (!err) res.json("insertado")
+          else
+          console.error(err)
+      })
+   
+ })
+
+
+
+ ruta.delete('/dltcita/:id',(req,res)=>{
+    const {id}= req.params;
+    let query="delete from cita where id_cita=?"
+
+    consulta.query(query,[id],(err,rows)=>{
+        if (!err) res.json("eliminado")
+        else
+        console.error(err)
+    })
+})
+
+
+ruta.put('/upcita', async (req, res) => {//actualizar 
+    
+    const {id_citav,nombrev,correov,id_fechasv,tiempo_citav}= req.body;  
+    console.log(req.body)
+   
+    let query = "update cita set nombre='"+nombrev+"',correo='"+correov+"',id_fechas='"+id_fechasv+"',tiempo_cita='"+tiempo_citav+"' where id_cita='"+id_citav+"';"
+   
+    consulta.query(query, (err,rows, fields)=>{
+        if(!err)  {
+        res.json('Registro actualizado');}
+        else 
+        console.error(err);
+    });
+});
+
+
+
+
 module.exports = ruta;

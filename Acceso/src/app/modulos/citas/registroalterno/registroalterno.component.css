@@ -1,0 +1,51 @@
+body{
+    background-image: linear-gradient( 0deg, rgba(255,255,255,1) 19.8%, rgba(235,249,249,1) 43.3% );
+ }
+ 
+ button{
+    background-color: green;
+    text-decoration-color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+ }
+ 
+ #input{
+     margin-top: 2%;
+     margin-left: 35%;
+     width:500px ;
+     height:600px ;
+     border-radius: 15px;
+     background: rgba(255, 255, 255, 0.7);
+     backdrop-filter: blur(5px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     border-right-color: rgba(255, 255, 255, 0.1);
+     border-bottom-color: rgba(255, 255, 255, 0.1);
+     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+     padding: 15px;
+     position: relative;
+     flex-direction: column;
+    }
+     
+ 
+ 
+     #container{
+     background: rgba(255, 255, 255, 0.05);
+     width: 1000px;
+     margin-top: 100px;
+     margin-left:-55% ;
+     border-radius: 15px;
+     border-color:slategray;
+     border-width: solid black 12 px;
+     border-style: solid; 
+     }
+     
+     th, td {
+         width: 250px;
+         text-align: center;
+         border: 2px solid blue;
+      }
+     
+      tr:hover {background-color: mediumaquamarine;}
+     
+      title{
+         text-align: center;
+      }

@@ -4,6 +4,7 @@ import { HorarioCitaComponent } from './horario-cita/horario-cita.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistroComponent } from './registro/registro.component';
+import { RegistroalternoComponent } from './registroalterno/registroalterno.component';
 
 
 
@@ -11,7 +12,8 @@ import { RegistroComponent } from './registro/registro.component';
 @NgModule({
   declarations: [
     HorarioCitaComponent,
-    RegistroComponent
+    RegistroComponent,
+    RegistroalternoComponent
   ],
   imports: [
     CommonModule,
