@@ -1,6 +1,3 @@
-import { Component, OnInit } from '@angular/core';
-import {Citas, RecaptchaService} from '../../service/recaptcha.service';
-import {Router} from '@angular/router';
 import {HttpClient} from "@angular/common/http";
 @Component({
   selector: 'app-solicitar-cita',
